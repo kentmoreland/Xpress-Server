@@ -1,0 +1,27 @@
+{
+  "name": "xpress",
+  "version": "0.0.1",
+  "description": "basic express server for projects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentmoreland/Xpress-Server.git"
+  },
+  "keywords": [
+    "express",
+    "server",
+    "basic"
+  ],
+  "author": "Kent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kentmoreland/Xpress-Server/issues"
+  },
+  "homepage": "https://github.com/kentmoreland/Xpress-Server#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
