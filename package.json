@@ -1,5 +1,5 @@
 {
-  "name": "xpress",
+  "name": "xpress-simple-server",
   "version": "0.0.1",
   "description": "basic express server for projects",
   "main": "app.js",
