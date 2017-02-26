@@ -1,24 +1,12 @@
 const express = require("express");
-const bodyParser = require('body-parser');
+const app = express();
+const fromFile = require('./server/includes');
 
-app = express()
+fromFile.middleware.runMiddleware(app);
+fromFile.routes.getRoutes(app);
 
-const port = 3000;
-
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(`${__dirname}/client`));
-
-
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+app.listen(fromFile.config.getPort, () => {
+  console.log(`Listening on port ${fromFile.config.getPort}...`);
 });
 
-
-
-app.listen(port, () => {
-  console.log(`Listening on port ${port}...`);
-});
-
-module.exports.app = app;
+module.exports = app;
