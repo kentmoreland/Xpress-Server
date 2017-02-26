@@ -2,10 +2,10 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 const server = require('../server');
 
-
 chai.use(chaiHttp);
 
 describe('/', function() {
+
   it('should make a successful connection', function() {
     chai.request(server)
     .get('/')
@@ -23,9 +23,11 @@ describe('/', function() {
       done();
     });
   });
+
 });
 
 describe('/api', function() {
+
   it('should make a succussful connection', function() {
     chai.request(server)
     .get('/api')
